@@ -9,26 +9,23 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>RidePonts | Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/site.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="site-wrapper" style="background-image: url(images/full_1.jpg);">
-
+    <div class="site-wrapper">
         <div class="site-wrapper-inner">
-
             <div class="cover-container">
-
               <div class="masthead clearfix">
                 <div class="inner">
-                  <h3 class="masthead-brand">RidePoints</h3>
-                  <nav class="nav nav-masthead">
+                  <h3 class="masthead-brand trench">RidePoints</h3>
+                  <nav class="nav robotothin nav-masthead">
                     <a class="nav-link active" href="#">Home</a>
                     <a class="nav-link" href="#">Facebook</a>
                     <a class="nav-link" href="#">Twitter</a>
@@ -40,19 +37,19 @@
               <div class="inner cover">
                 <div class="row">
                     <img class="img-fluid wow fadeInLeft col-md-6" data-wow-duration="0.5s" data-wow-delay="0.3s" src="img/png/phone-trio.png"/>
-                    <h1 class="cover-heading wow fadeInRight col-md-6" data-wow-duration="1s" data-wow-delay="0.7s">The Next Big Thing</h1>
-                    <p class="lead wow fadeInRight col-md-6" data-wow-duration="0.7s" data-wow-delay="1s">Don't miss the app that is going to change the way you drive forever.</p>
+                    <h1 class="cover-heading wow trench fadeInRight col-md-6" data-wow-duration="1s" data-wow-delay="0.7s">The Next Big Thing</h1>
+                    <p class="lead wow fadeInRight robotothin col-md-6" data-wow-duration="0.7s" data-wow-delay="1s">Don't miss the app that is going to change the way you drive forever.</p>
                 </div>
                 <div class="row">
                     <p class="lead">
-                      <a href="#" class="btn wow fadeInUp btn-lg btn-secondary" data-wow-duration="1s" data-wow-delay="1.3s">Contact Us</a>
+                      <button type="button" data-toggle='modal' data-target='#myModal' class="wow fadeInUp robotothin btn btn-secondary-outline" data-wow-duration="1s" data-wow-delay="0.7s">Want to know more?</button>
                     </p>
                 </div>
               </div>
 
               <div class="mastfoot">
                 <div class="inner">
-                  <p>&copy; RidePoints 2016</p>
+                  <p class="trench">&copy; RidePoints 2016</p>
                 </div>
               </div>
 
@@ -61,6 +58,59 @@
         </div>
 
     </div>
+
+    <div class="modal fade dark-text robotothin" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <form role="form" method="post" action="http://cse.unl.edu/~dteske/sendMail.php">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Contact Us</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="email">To</label>
+                  <select name="to" id="email" class="form-control">
+                      <option value="info@ridepoints.io">
+                          General Information
+                      </option>
+                      <option value="admin@ridepoints.io">
+                          Technical Help
+                      </option>
+                      <option value="tsears@ridepoints.io">
+                          Trent Sears
+                      </option>
+                      <option value="dteske@ridepoints.io">
+                          Daric Teske
+                      </option>
+                      <option value="jwarner@ridepoints.io">
+                          Jacob Warner
+                      </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="email">Reply Address</label>
+                  <input type="email" class="form-control" id="email" name='from' placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="text">Subject</label>
+                  <input type="text" class="form-control" id="subject" name='subject' value='Please send updates' required>
+                </div>
+                <div class="form-group">
+                  <label for="textarea">Message</label>
+                  <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter Message" required></textarea>
+                </div>
+                <input type="hidden" value="http://www.ridepoints.io" name="return-url" />
+              </div>
+              <div class="modal-footer">
+                <button type="submit" name="submit" class="btn btn-success-outline">Send</button>
+                <button type="button" class="btn btn-danger-outline" data-dismiss="modal">Close</button>
+              </div>
+            </form>
+            </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
